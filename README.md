@@ -21,4 +21,4 @@ https://stackoverflow.com/questions/24114676/git-error-failed-to-push-some-refs-
 2. Run `npm install`
 3. Run `npm run start`
 4. Navigate to http://localhost:4200/
-5. Complete https://angular.io/start
+5. Complete https://angular.io/start, ignore deployment
