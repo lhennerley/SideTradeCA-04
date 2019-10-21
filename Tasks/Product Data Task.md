@@ -5,8 +5,8 @@
 Below is an example of how you can update the structure of your product table, here we are adding a column that will handle the product description.
 
 ```
-UPDATE TABLE $Schema.product
-    ADD COLUMN ( product_description TEXT );
+ALTER TABLE abc_orders.product
+    ADD COLUMN product_description TEXT;
 ```
 
 To start to make the shopping website your own, you can update the product table and set the product name/description to be whatever we want it to be, so you can start to make this your own
