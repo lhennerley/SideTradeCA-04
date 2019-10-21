@@ -3,13 +3,15 @@
 <div *ngFor="let product of products; index as productId">
   <h3>
     <a
-      [title]="product.name + ' details'"
+      [title]="product.productName + ' details'"
       [routerLink]="['/products', productId]"
     >
-      {{ product.name }}
+      {{ product.productName }}
     </a>
   </h3>
-  <p *ngIf="product.description">Description: {{ product.description }}</p>
+  <p *ngIf="product.productDescription">
+    Description: {{ product.productDescription }}
+  </p>
 
   <button (click)="share()">
     Share

@@ -1,6 +1,8 @@
 import { Component } from "@angular/core";
 
-import { products } from "../products";
+// import { products } from "../products";
+import { ProductService } from "../services/products.service";
+import { Product } from "./product-list.model";
 
 @Component({
   selector: "app-product-list",
@@ -8,7 +10,17 @@ import { products } from "../products";
   styleUrls: ["./product-list.component.css"]
 })
 export class ProductListComponent {
-  products = products;
+  products: Product[];
+
+  constructor(private productService: ProductService) {}
+
+  ngOnInit(): void {
+    this.productService.getProducts().then(products => {
+      this.products = products;
+    });
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+  }
 
   share() {
     window.alert("The product has been shared!");
