@@ -2,9 +2,7 @@
 
 ## Updating the Product table
 
-Below is an example of how you can update the structure of your product table, here we are adding a column that will handle the product image using the type `bytea`
-
-https://www.postgresql.org/docs/9.1/datatype-binary.html
+Below is an example of how you can update the structure of your product table, here we are adding a column that will handle the product description.
 
 ```
 UPDATE TABLE $Schema.product
